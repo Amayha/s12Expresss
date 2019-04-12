@@ -12,11 +12,18 @@ app.set('view engine', 'handlebars');
 
 // las rutas a configurar 
 
+app.get('/', function(request, response){
+    var contexto = {
+        titulo : "pagina principal",
+    };
 
+    response.render('home', contexto);
+});
 
+app.post('/login', function(request, response){
+    console.log('hola');
 
-
-
+});
 
 
 app.listen(3000); // al final de todo 
